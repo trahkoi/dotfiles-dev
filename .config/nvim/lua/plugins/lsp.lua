@@ -15,7 +15,7 @@ return {
 
       require("mason").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "omnisharp", "gopls" }
+        ensure_installed = { "lua_ls", "gopls" }
       })
 
       require 'lspconfig'.gopls.setup {}
@@ -52,31 +52,6 @@ return {
             },
           }
         }
-      }
-
-      require 'lspconfig'.omnisharp.setup {
-        cmd = { "omnisharp" },
-        capabilities = capabilities,
-        on_attach = function(client, bufnr)
-          user_keymaps.setup_lsp_keys(bufnr)
-        end,
-        settings = {
-          FormattingOptions = {
-            EnableEditorConfigSupport = true,
-            OrganizeImports = true,
-          },
-          MsBuild = {
-            LoadProjectsOnDemand = nil,
-          },
-          RoslynExtensionsOptions = {
-            EnableAnalyzersSupport = true,
-            EnableImportCompletion = true,
-            AnalyzeOpenDocumentsOnly = true,
-          },
-          Sdk = {
-            IncludePrereleases = true,
-          },
-        },
       }
     end
   },
