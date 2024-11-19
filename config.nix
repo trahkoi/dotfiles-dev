@@ -7,7 +7,7 @@
         go
         air
         fd
-        rigprep
+        ripgrep
         fzf
       ];
     };
