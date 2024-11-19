@@ -19,8 +19,6 @@ return {
     -- Define your formatters
     formatters_by_ft = {
       go = { 'gofmt' },
-      --       cs = { 'csharpier' },
-      cs = { 'dotnet_format' },
       lua = { "stylua" },
       python = { "isort", "black" },
       javascript = { "prettierd", "prettier", stop_after_first = true },
