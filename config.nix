@@ -9,6 +9,7 @@
         fd
         ripgrep
         fzf
+        tmux
       ];
     };
   };
