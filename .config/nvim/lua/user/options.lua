@@ -9,9 +9,9 @@ vim.g.have_nerd_font = true
 vim.opt.nu = true
 vim.opt.rnu = true
 
--- Set tabs to 2 spaces
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+-- Set tabs to 4 spaces
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Disable text wrap
