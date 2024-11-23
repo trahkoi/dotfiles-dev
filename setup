@@ -6,7 +6,9 @@ mkdir -p "$XDG_CONFIG_HOME"
 mkdir -p "$XDG_CONFIG_HOME"/nixpkgs
 
 ln -sf "$PWD/.config/nvim" "$XDG_CONFIG_HOME"/nvim
-ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
 ln -sf "$PWD/config.nix" "$XDG_CONFIG_HOME"/nixpkgs/config.nix
+ln -sf "$PWD/.tmux.conf" "$HOME"/.tmux.conf
+
+git clone https://github.com/tmux-plugins/tpm "$XDG_CONFIG_HOME"/tmux/plugins/tpm
 
 nix-env -iA nixpkgs.myPackages
